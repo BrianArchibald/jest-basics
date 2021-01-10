@@ -28,3 +28,26 @@ test('Should be falsy', () => {
 test('Should be Brian Archibald object', () => {
   expect(functions.createUser()).toEqual({ firstName: 'Brian', lastName: 'Archibald'});
 });
+
+// can do all the logic in the test too
+test('Should be less than 20', () => {
+  const num1 = 5;
+  const num2 = 14;
+  expect(num1 + num2).toBeLessThan(20);
+});
+
+// regex
+test('no I in team', () => {
+  expect('team').not.toMatch(/I/);
+});
+
+// Arrays
+test('Brian in names', () => {
+  const names = ['brian', 'joe'];
+  expect(names).toContain('brian');
+});
+
+
+
+
+
