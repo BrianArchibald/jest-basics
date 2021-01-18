@@ -5,6 +5,12 @@
 // toBeDefined is the opposite of toBeUndefined
 // toBeTruthy matches anything that an if statement treats as true
 // toBeFalsy matches anything that an if statement treats as false
+//
+beforeEach(() => initDB());
+afterEach(() => closeDB());
+
+const initDB = () => console.log('DB started');
+const closeDB = () => console.log('DB closed');
 
 const functions = require('./functions');
 
